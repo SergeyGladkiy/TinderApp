@@ -8,18 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		25EA9ACDDE35D6F1EA715B31 /* Pods_TinderAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ED0CDCE453CBD6BB6E8285 /* Pods_TinderAppTests.framework */; };
+		82118AD923F2DDE800D373AA /* UtilsSwippableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82118AD823F2DDAF00D373AA /* UtilsSwippableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82118AE323F2E0CD00D373AA /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118AE123F2E0CD00D373AA /* MainScreenViewController.swift */; };
+		82118AE423F2E0CD00D373AA /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82118AE223F2E0CD00D373AA /* MainScreenViewController.xib */; };
+		82118AEB23F2E34D00D373AA /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118AEA23F2E34D00D373AA /* MainScreenViewModel.swift */; };
+		82118AED23F2E35C00D373AA /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118AEC23F2E35C00D373AA /* MainScreenModel.swift */; };
+		82118AF123F2E3B800D373AA /* InterfaceMainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118AF023F2E3B800D373AA /* InterfaceMainScreenViewModel.swift */; };
+		82118AF323F2E3D900D373AA /* InterfaceMainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118AF223F2E3D900D373AA /* InterfaceMainScreenModel.swift */; };
+		82118AF523F2E41A00D373AA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118AF423F2E41A00D373AA /* Observable.swift */; };
+		82118AF723F2ED7500D373AA /* SwippableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82118AF623F2ED7500D373AA /* SwippableView.xib */; };
+		8243D94623F2D0A000A63FDB /* CoordinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243D94523F2D0A000A63FDB /* CoordinatorApp.swift */; };
+		8243D94923F2D0F800A63FDB /* InterfaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243D94823F2D0F800A63FDB /* InterfaceCoordinator.swift */; };
 		82B7C81923EC227300E9BBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7C81823EC227300E9BBCB /* AppDelegate.swift */; };
 		82B7C81B23EC227300E9BBCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7C81A23EC227300E9BBCB /* SceneDelegate.swift */; };
-		82B7C81D23EC227300E9BBCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7C81C23EC227300E9BBCB /* ViewController.swift */; };
-		82B7C82023EC227300E9BBCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B7C81E23EC227300E9BBCB /* Main.storyboard */; };
 		82B7C82223EC227C00E9BBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B7C82123EC227C00E9BBCB /* Assets.xcassets */; };
 		82B7C82523EC227C00E9BBCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B7C82323EC227C00E9BBCB /* LaunchScreen.storyboard */; };
 		82B7C83023EC227D00E9BBCB /* TinderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7C82F23EC227D00E9BBCB /* TinderAppTests.swift */; };
 		82B7C89323F18D8C00E9BBCB /* UtilsSwippableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B7C89223F18D8C00E9BBCB /* UtilsSwippableView.framework */; };
-		82B7C89423F18D8C00E9BBCB /* UtilsSwippableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82B7C89223F18D8C00E9BBCB /* UtilsSwippableView.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		82118AD723F2DDAF00D373AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82118AD323F2DDAF00D373AA /* UtilsSwippableView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82B7C86823F1742800E9BBCB;
+			remoteInfo = UtilsSwippableView;
+		};
 		82B7C82C23EC227D00E9BBCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 82B7C80D23EC227300E9BBCB /* Project object */;
@@ -36,7 +51,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				82B7C89423F18D8C00E9BBCB /* UtilsSwippableView.framework in Embed Frameworks */,
+				82118AD923F2DDE800D373AA /* UtilsSwippableView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,11 +60,20 @@
 
 /* Begin PBXFileReference section */
 		268148D66EDCD50691A56DDA /* Pods-TinderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderApp.debug.xcconfig"; path = "Target Support Files/Pods-TinderApp/Pods-TinderApp.debug.xcconfig"; sourceTree = "<group>"; };
+		82118AD323F2DDAF00D373AA /* UtilsSwippableView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = UtilsSwippableView.xcodeproj; sourceTree = "<group>"; };
+		82118AE123F2E0CD00D373AA /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		82118AE223F2E0CD00D373AA /* MainScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenViewController.xib; sourceTree = "<group>"; };
+		82118AEA23F2E34D00D373AA /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		82118AEC23F2E35C00D373AA /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		82118AF023F2E3B800D373AA /* InterfaceMainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceMainScreenViewModel.swift; sourceTree = "<group>"; };
+		82118AF223F2E3D900D373AA /* InterfaceMainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceMainScreenModel.swift; sourceTree = "<group>"; };
+		82118AF423F2E41A00D373AA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		82118AF623F2ED7500D373AA /* SwippableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwippableView.xib; sourceTree = "<group>"; };
+		8243D94523F2D0A000A63FDB /* CoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorApp.swift; sourceTree = "<group>"; };
+		8243D94823F2D0F800A63FDB /* InterfaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceCoordinator.swift; sourceTree = "<group>"; };
 		82B7C81523EC227300E9BBCB /* TinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B7C81823EC227300E9BBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B7C81A23EC227300E9BBCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82B7C81C23EC227300E9BBCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		82B7C81F23EC227300E9BBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82B7C82123EC227C00E9BBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B7C82423EC227C00E9BBCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82B7C82623EC227C00E9BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,9 +119,80 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		82118AD423F2DDAF00D373AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82118AD823F2DDAF00D373AA /* UtilsSwippableView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82118AE523F2E29700D373AA /* MainModuleMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				82118AE623F2E2D500D373AA /* View */,
+				82118AE923F2E30000D373AA /* ViewModel */,
+				82118AE823F2E2E900D373AA /* Model */,
+			);
+			path = MainModuleMVVM;
+			sourceTree = "<group>";
+		};
+		82118AE623F2E2D500D373AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82118AE223F2E0CD00D373AA /* MainScreenViewController.xib */,
+				82118AF623F2ED7500D373AA /* SwippableView.xib */,
+				82118AE123F2E0CD00D373AA /* MainScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82118AE823F2E2E900D373AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82118AEF23F2E39600D373AA /* Interface */,
+				82118AEC23F2E35C00D373AA /* MainScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82118AE923F2E30000D373AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				82118AEE23F2E38700D373AA /* Interface */,
+				82118AEA23F2E34D00D373AA /* MainScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		82118AEE23F2E38700D373AA /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				82118AF023F2E3B800D373AA /* InterfaceMainScreenViewModel.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		82118AEF23F2E39600D373AA /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				82118AF223F2E3D900D373AA /* InterfaceMainScreenModel.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		8243D94723F2D0C700A63FDB /* InterfaceCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8243D94823F2D0F800A63FDB /* InterfaceCoordinator.swift */,
+			);
+			path = InterfaceCoordinator;
+			sourceTree = "<group>";
+		};
 		82B7C80C23EC227300E9BBCB = {
 			isa = PBXGroup;
 			children = (
+				82118AD323F2DDAF00D373AA /* UtilsSwippableView.xcodeproj */,
 				82B7C81723EC227300E9BBCB /* TinderApp */,
 				82B7C82E23EC227D00E9BBCB /* TinderAppTests */,
 				82B7C81623EC227300E9BBCB /* Products */,
@@ -118,14 +213,13 @@
 		82B7C81723EC227300E9BBCB /* TinderApp */ = {
 			isa = PBXGroup;
 			children = (
-				82B7C81823EC227300E9BBCB /* AppDelegate.swift */,
-				82B7C81A23EC227300E9BBCB /* SceneDelegate.swift */,
-				82B7C81C23EC227300E9BBCB /* ViewController.swift */,
 				82B7C83E23EC26AE00E9BBCB /* DI */,
 				82B7C84023EC26C800E9BBCB /* CoordinatorApp */,
 				82B7C84223EC271C00E9BBCB /* Services */,
-				82B7C84123EC26DE00E9BBCB /* Common */,
-				82B7C81E23EC227300E9BBCB /* Main.storyboard */,
+				82118AE523F2E29700D373AA /* MainModuleMVVM */,
+				82B7C81823EC227300E9BBCB /* AppDelegate.swift */,
+				82B7C81A23EC227300E9BBCB /* SceneDelegate.swift */,
+				82118AF423F2E41A00D373AA /* Observable.swift */,
 				82B7C82123EC227C00E9BBCB /* Assets.xcassets */,
 				82B7C82323EC227C00E9BBCB /* LaunchScreen.storyboard */,
 				82B7C82623EC227C00E9BBCB /* Info.plist */,
@@ -152,17 +246,10 @@
 		82B7C84023EC26C800E9BBCB /* CoordinatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				8243D94723F2D0C700A63FDB /* InterfaceCoordinator */,
+				8243D94523F2D0A000A63FDB /* CoordinatorApp.swift */,
 			);
 			path = CoordinatorApp;
-			sourceTree = "<group>";
-		};
-		82B7C84123EC26DE00E9BBCB /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				82B7C84423EC29EB00E9BBCB /* Extensions */,
-				82B7C84323EC29D700E9BBCB /* Helpers */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		82B7C84223EC271C00E9BBCB /* Services */ = {
@@ -170,20 +257,6 @@
 			children = (
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		82B7C84323EC29D700E9BBCB /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		82B7C84423EC29EB00E9BBCB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		82B7C89123F18D8B00E9BBCB /* Frameworks */ = {
@@ -267,6 +340,12 @@
 			mainGroup = 82B7C80C23EC227300E9BBCB;
 			productRefGroup = 82B7C81623EC227300E9BBCB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 82118AD423F2DDAF00D373AA /* Products */;
+					ProjectRef = 82118AD323F2DDAF00D373AA /* UtilsSwippableView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				82B7C81423EC227300E9BBCB /* TinderApp */,
@@ -275,14 +354,25 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		82118AD823F2DDAF00D373AA /* UtilsSwippableView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UtilsSwippableView.framework;
+			remoteRef = 82118AD723F2DDAF00D373AA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		82B7C81323EC227300E9BBCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82118AF723F2ED7500D373AA /* SwippableView.xib in Resources */,
 				82B7C82523EC227C00E9BBCB /* LaunchScreen.storyboard in Resources */,
 				82B7C82223EC227C00E9BBCB /* Assets.xcassets in Resources */,
-				82B7C82023EC227300E9BBCB /* Main.storyboard in Resources */,
+				82118AE423F2E0CD00D373AA /* MainScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +437,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82B7C81D23EC227300E9BBCB /* ViewController.swift in Sources */,
+				82118AE323F2E0CD00D373AA /* MainScreenViewController.swift in Sources */,
+				82118AED23F2E35C00D373AA /* MainScreenModel.swift in Sources */,
+				8243D94623F2D0A000A63FDB /* CoordinatorApp.swift in Sources */,
+				82118AF123F2E3B800D373AA /* InterfaceMainScreenViewModel.swift in Sources */,
+				8243D94923F2D0F800A63FDB /* InterfaceCoordinator.swift in Sources */,
 				82B7C81923EC227300E9BBCB /* AppDelegate.swift in Sources */,
+				82118AF523F2E41A00D373AA /* Observable.swift in Sources */,
 				82B7C81B23EC227300E9BBCB /* SceneDelegate.swift in Sources */,
+				82118AEB23F2E34D00D373AA /* MainScreenViewModel.swift in Sources */,
+				82118AF323F2E3D900D373AA /* InterfaceMainScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,14 +469,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		82B7C81E23EC227300E9BBCB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82B7C81F23EC227300E9BBCB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		82B7C82323EC227C00E9BBCB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
