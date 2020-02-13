@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol InterfaceMainScreenViewModel {
+    var state: Observable<MainScreenViewModelState> { get }
+    
+    func getTinderData()
+    func likeButtonTapped(sNumber: Int, id: String)
+    func dislikeButtonTapped(sNumber: Int, id: String)
+}

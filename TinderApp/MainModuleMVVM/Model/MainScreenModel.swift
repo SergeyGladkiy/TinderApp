@@ -7,3 +7,33 @@
 //
 
 import Foundation
+
+class MainScreenModel {
+    private let networkService: InterfaceDataFetcher
+    private let mapper: InterfaceMapperMainScreenModel
+    var models: Observable<[MainScreenDataSource]> = Observable(observable: [])
+    
+    init(networkService: InterfaceDataFetcher, mapper: InterfaceMapperMainScreenModel) {
+        self.networkService = networkService
+        self.mapper = mapper
+    }
+}
+
+extension MainScreenModel: InterfaceMainSreenModel {
+    func getDataFromTinder() {
+        networkService.getData { [weak self] (response) in
+            guard let self = self, let response = response else { return }
+            self.models.observable = self.mapper.getDataSource(from: response)
+        }
+    }
+    
+    func sendLike(sNumber: Int, id: String) {
+        
+    }
+    
+    func sendDislike(sNumber: Int, id: String) {
+        
+    }
+    
+    
+}

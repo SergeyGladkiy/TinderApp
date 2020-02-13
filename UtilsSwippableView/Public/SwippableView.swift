@@ -97,6 +97,7 @@ extension SwippableView {
             dataSource.view(view: rawView, atIndex: indexCounter)
             
             rawView.frame = bounds
+            rawView.layer.cornerRadius = 10
             insertSubview(rawView, at: 0)
             viewsArray.add(rawView)
             indexCounter += 1

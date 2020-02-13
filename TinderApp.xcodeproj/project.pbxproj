@@ -17,6 +17,22 @@
 		82118AF323F2E3D900D373AA /* InterfaceMainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118AF223F2E3D900D373AA /* InterfaceMainScreenModel.swift */; };
 		82118AF523F2E41A00D373AA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118AF423F2E41A00D373AA /* Observable.swift */; };
 		82118AF723F2ED7500D373AA /* SwippableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82118AF623F2ED7500D373AA /* SwippableView.xib */; };
+		82118B1223F5855600D373AA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B1123F5855600D373AA /* AuthService.swift */; };
+		82118B1523F585F400D373AA /* InterfaceAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B1423F585F400D373AA /* InterfaceAuthService.swift */; };
+		82118B1823F5879D00D373AA /* NetworkDataFetcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B1723F5879D00D373AA /* NetworkDataFetcer.swift */; };
+		82118B1A23F587D800D373AA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B1923F587D800D373AA /* NetworkService.swift */; };
+		82118B1D23F5882900D373AA /* InterfaceDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B1C23F5882900D373AA /* InterfaceDataFetcher.swift */; };
+		82118B1F23F5883C00D373AA /* InterfaceNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B1E23F5883C00D373AA /* InterfaceNetworkService.swift */; };
+		82118B2223F5887E00D373AA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B2123F5887E00D373AA /* API.swift */; };
+		82118B2423F588F500D373AA /* GotTinderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B2323F588F500D373AA /* GotTinderResponse.swift */; };
+		82118B2623F5895400D373AA /* TinderUserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B2523F5895400D373AA /* TinderUserResult.swift */; };
+		82118B2823F58B6400D373AA /* TinderUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B2723F58B6400D373AA /* TinderUserInfo.swift */; };
+		82118B2A23F58B7000D373AA /* TinderUserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B2923F58B7000D373AA /* TinderUserPhoto.swift */; };
+		82118B2C23F58BA300D373AA /* TinderUserTeaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B2B23F58BA300D373AA /* TinderUserTeaser.swift */; };
+		82118B3023F58FDF00D373AA /* MapperMainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B2F23F58FDF00D373AA /* MapperMainScreenModel.swift */; };
+		82118B3223F58FF700D373AA /* InterfaceMapperMainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B3123F58FF700D373AA /* InterfaceMapperMainScreenModel.swift */; };
+		82118B3423F5914700D373AA /* MainScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B3323F5914700D373AA /* MainScreenData.swift */; };
+		82118B3923F5ADAC00D373AA /* TemporaryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82118B3823F5ADAB00D373AA /* TemporaryContainer.swift */; };
 		8243D94623F2D0A000A63FDB /* CoordinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243D94523F2D0A000A63FDB /* CoordinatorApp.swift */; };
 		8243D94923F2D0F800A63FDB /* InterfaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243D94823F2D0F800A63FDB /* InterfaceCoordinator.swift */; };
 		82B7C81923EC227300E9BBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7C81823EC227300E9BBCB /* AppDelegate.swift */; };
@@ -69,6 +85,22 @@
 		82118AF223F2E3D900D373AA /* InterfaceMainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceMainScreenModel.swift; sourceTree = "<group>"; };
 		82118AF423F2E41A00D373AA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		82118AF623F2ED7500D373AA /* SwippableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwippableView.xib; sourceTree = "<group>"; };
+		82118B1123F5855600D373AA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		82118B1423F585F400D373AA /* InterfaceAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceAuthService.swift; sourceTree = "<group>"; };
+		82118B1723F5879D00D373AA /* NetworkDataFetcer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcer.swift; sourceTree = "<group>"; };
+		82118B1923F587D800D373AA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		82118B1C23F5882900D373AA /* InterfaceDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceDataFetcher.swift; sourceTree = "<group>"; };
+		82118B1E23F5883C00D373AA /* InterfaceNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceNetworkService.swift; sourceTree = "<group>"; };
+		82118B2123F5887E00D373AA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		82118B2323F588F500D373AA /* GotTinderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotTinderResponse.swift; sourceTree = "<group>"; };
+		82118B2523F5895400D373AA /* TinderUserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUserResult.swift; sourceTree = "<group>"; };
+		82118B2723F58B6400D373AA /* TinderUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUserInfo.swift; sourceTree = "<group>"; };
+		82118B2923F58B7000D373AA /* TinderUserPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUserPhoto.swift; sourceTree = "<group>"; };
+		82118B2B23F58BA300D373AA /* TinderUserTeaser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUserTeaser.swift; sourceTree = "<group>"; };
+		82118B2F23F58FDF00D373AA /* MapperMainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperMainScreenModel.swift; sourceTree = "<group>"; };
+		82118B3123F58FF700D373AA /* InterfaceMapperMainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceMapperMainScreenModel.swift; sourceTree = "<group>"; };
+		82118B3323F5914700D373AA /* MainScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenData.swift; sourceTree = "<group>"; };
+		82118B3823F5ADAB00D373AA /* TemporaryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryContainer.swift; sourceTree = "<group>"; };
 		8243D94523F2D0A000A63FDB /* CoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorApp.swift; sourceTree = "<group>"; };
 		8243D94823F2D0F800A63FDB /* InterfaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceCoordinator.swift; sourceTree = "<group>"; };
 		82B7C81523EC227300E9BBCB /* TinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,9 +172,9 @@
 		82118AE623F2E2D500D373AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				82118AE123F2E0CD00D373AA /* MainScreenViewController.swift */,
 				82118AE223F2E0CD00D373AA /* MainScreenViewController.xib */,
 				82118AF623F2ED7500D373AA /* SwippableView.xib */,
-				82118AE123F2E0CD00D373AA /* MainScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +184,8 @@
 			children = (
 				82118AEF23F2E39600D373AA /* Interface */,
 				82118AEC23F2E35C00D373AA /* MainScreenModel.swift */,
+				82118B2D23F58FAF00D373AA /* Mapper */,
+				82118B3523F595D500D373AA /* StructsDataSourceMainScreen */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +213,81 @@
 				82118AF223F2E3D900D373AA /* InterfaceMainScreenModel.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		82118B0F23F5851A00D373AA /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				82118B1323F585CB00D373AA /* Interface */,
+				82118B1123F5855600D373AA /* AuthService.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		82118B1323F585CB00D373AA /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				82118B1423F585F400D373AA /* InterfaceAuthService.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		82118B1623F5875100D373AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				82118B1B23F587E500D373AA /* Interfaces */,
+				82118B1723F5879D00D373AA /* NetworkDataFetcer.swift */,
+				82118B1923F587D800D373AA /* NetworkService.swift */,
+				82118B2123F5887E00D373AA /* API.swift */,
+				82118B2023F5884D00D373AA /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		82118B1B23F587E500D373AA /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				82118B1C23F5882900D373AA /* InterfaceDataFetcher.swift */,
+				82118B1E23F5883C00D373AA /* InterfaceNetworkService.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		82118B2023F5884D00D373AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82118B2323F588F500D373AA /* GotTinderResponse.swift */,
+				82118B2523F5895400D373AA /* TinderUserResult.swift */,
+				82118B2723F58B6400D373AA /* TinderUserInfo.swift */,
+				82118B2923F58B7000D373AA /* TinderUserPhoto.swift */,
+				82118B2B23F58BA300D373AA /* TinderUserTeaser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		82118B2D23F58FAF00D373AA /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				82118B2E23F58FC200D373AA /* Interface */,
+				82118B2F23F58FDF00D373AA /* MapperMainScreenModel.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		82118B2E23F58FC200D373AA /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				82118B3123F58FF700D373AA /* InterfaceMapperMainScreenModel.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		82118B3523F595D500D373AA /* StructsDataSourceMainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				82118B3323F5914700D373AA /* MainScreenData.swift */,
+			);
+			path = StructsDataSourceMainScreen;
 			sourceTree = "<group>";
 		};
 		8243D94723F2D0C700A63FDB /* InterfaceCoordinator */ = {
@@ -248,6 +357,7 @@
 			children = (
 				8243D94723F2D0C700A63FDB /* InterfaceCoordinator */,
 				8243D94523F2D0A000A63FDB /* CoordinatorApp.swift */,
+				82118B3823F5ADAB00D373AA /* TemporaryContainer.swift */,
 			);
 			path = CoordinatorApp;
 			sourceTree = "<group>";
@@ -255,6 +365,8 @@
 		82B7C84223EC271C00E9BBCB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				82118B1623F5875100D373AA /* Network */,
+				82118B0F23F5851A00D373AA /* AuthService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -438,15 +550,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				82118AE323F2E0CD00D373AA /* MainScreenViewController.swift in Sources */,
+				82118B1823F5879D00D373AA /* NetworkDataFetcer.swift in Sources */,
 				82118AED23F2E35C00D373AA /* MainScreenModel.swift in Sources */,
+				82118B3223F58FF700D373AA /* InterfaceMapperMainScreenModel.swift in Sources */,
+				82118B2423F588F500D373AA /* GotTinderResponse.swift in Sources */,
 				8243D94623F2D0A000A63FDB /* CoordinatorApp.swift in Sources */,
+				82118B1F23F5883C00D373AA /* InterfaceNetworkService.swift in Sources */,
 				82118AF123F2E3B800D373AA /* InterfaceMainScreenViewModel.swift in Sources */,
 				8243D94923F2D0F800A63FDB /* InterfaceCoordinator.swift in Sources */,
+				82118B2A23F58B7000D373AA /* TinderUserPhoto.swift in Sources */,
+				82118B2823F58B6400D373AA /* TinderUserInfo.swift in Sources */,
+				82118B2C23F58BA300D373AA /* TinderUserTeaser.swift in Sources */,
+				82118B3023F58FDF00D373AA /* MapperMainScreenModel.swift in Sources */,
+				82118B1A23F587D800D373AA /* NetworkService.swift in Sources */,
+				82118B1223F5855600D373AA /* AuthService.swift in Sources */,
 				82B7C81923EC227300E9BBCB /* AppDelegate.swift in Sources */,
+				82118B2623F5895400D373AA /* TinderUserResult.swift in Sources */,
 				82118AF523F2E41A00D373AA /* Observable.swift in Sources */,
 				82B7C81B23EC227300E9BBCB /* SceneDelegate.swift in Sources */,
+				82118B1523F585F400D373AA /* InterfaceAuthService.swift in Sources */,
 				82118AEB23F2E34D00D373AA /* MainScreenViewModel.swift in Sources */,
+				82118B1D23F5882900D373AA /* InterfaceDataFetcher.swift in Sources */,
+				82118B2223F5887E00D373AA /* API.swift in Sources */,
+				82118B3923F5ADAC00D373AA /* TemporaryContainer.swift in Sources */,
 				82118AF323F2E3D900D373AA /* InterfaceMainScreenModel.swift in Sources */,
+				82118B3423F5914700D373AA /* MainScreenData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

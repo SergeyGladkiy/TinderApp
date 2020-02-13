@@ -7,24 +7,64 @@
 //
 
 import UIKit
+import UtilsSwippableView
 
 class MainScreenViewController: UIViewController {
-
+    
+    @IBOutlet private weak var swippableView: SwippableView!
+    
+    private let viewModel: InterfaceMainScreenViewModel
+    private let identifier = "MainScreenViewController"
+    
+    init(viewModel: InterfaceMainScreenViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: identifier, bundle: Bundle(identifier: identifier))
+        
+        self.viewModel.state.bind { [weak self] state in
+            guard let self = self else { return }
+            
+            switch state {
+            case .initial:
+                return
+            case .finishedLoad:
+                self.swippableView.reloadData()
+            }
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        swippableView.layer.cornerRadius = 10
+        //swippableView.clipsToBounds = true
+        
+        let viewNib = UINib(nibName: "SwippableView", bundle: nil)
+        swippableView.registerNib(nib: viewNib)
+        swippableView.dataSource = self
+        swippableView.delegate = self
+        
+        viewModel.getTinderData()
     }
+    
+   
 
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MainScreenViewController: SwippableViewDelegate, SwippableViewDataSource {
+    func willSwiped(index: Int, direction: swipeDirection) {
+        
     }
-    */
-
+    
+    func view(view: UIView, atIndex index: Int) {
+        
+    }
+    
+    func numberOfViews() -> Int {
+        return 10
+    }
+    
+    
 }

@@ -15,7 +15,8 @@ class CoordinatorApp {
 
 extension CoordinatorApp: InterfaceCoordinator {
     func start() -> UIWindow {
-        let vc = MainScreenViewController()
+        
+        let vc = TemporaryContainer().assembleModule()
         self.window = UIWindow()
         window?.rootViewController = vc
         window?.makeKeyAndVisible()

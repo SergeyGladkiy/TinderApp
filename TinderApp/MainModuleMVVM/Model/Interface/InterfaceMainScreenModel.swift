@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol InterfaceMainSreenModel {
+    var models: Observable<[MainScreenDataSource]> { get }
+    
+    func getDataFromTinder()
+    func sendLike(sNumber: Int, id: String)
+    func sendDislike(sNumber: Int, id: String)
+}
