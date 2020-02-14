@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-protocol InterfaceCoordinator {
+protocol InterfaceCoordinatorApp {
     func start() -> UIWindow
 }

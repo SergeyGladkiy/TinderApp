@@ -12,6 +12,11 @@ import UtilsSwippableView
 class MainScreenViewController: UIViewController {
     
     @IBOutlet private weak var swippableView: SwippableView!
+    @IBOutlet weak var likeImageView: UIImageView!
+    @IBOutlet weak var dislikeImageView: UIImageView!
+    
+    private var imageCount = 0
+    private var currentIndex = 0
     
     private let viewModel: InterfaceMainScreenViewModel
     private let identifier = "MainScreenViewController"
@@ -19,6 +24,8 @@ class MainScreenViewController: UIViewController {
     init(viewModel: InterfaceMainScreenViewModel) {
         self.viewModel = viewModel
         super.init(nibName: identifier, bundle: Bundle(identifier: identifier))
+        
+        
         
         self.viewModel.state.bind { [weak self] state in
             guard let self = self else { return }
@@ -38,6 +45,8 @@ class MainScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupGestureRecognizers()
+        
         swippableView.layer.cornerRadius = 10
         //swippableView.clipsToBounds = true
         
@@ -49,7 +58,26 @@ class MainScreenViewController: UIViewController {
         viewModel.getTinderData()
     }
     
-   
+    private func setupGestureRecognizers() {
+        let tapGestureRecognazerLikeImage = UITapGestureRecognizer(target: self, action: #selector(likeAction))
+        self.likeImageView.addGestureRecognizer(tapGestureRecognazerLikeImage)
+        
+        let tapGestureRecongnazerDislikeImage = UITapGestureRecognizer(target: self, action: #selector(dislikeAction))
+    self.dislikeImageView.addGestureRecognizer(tapGestureRecongnazerDislikeImage)
+    }
+    
+    @objc func likeAction() {
+        if viewModel.dataSource.observable.count > 0 {
+            swippableView.autoSwipe(direction: .right)
+        }
+    }
+    
+    @objc func dislikeAction() {
+        if viewModel.dataSource.observable.count > 0 {
+            swippableView.autoSwipe(direction: .left)
+        }
+        
+    }
 
 }
 
@@ -63,7 +91,7 @@ extension MainScreenViewController: SwippableViewDelegate, SwippableViewDataSour
     }
     
     func numberOfViews() -> Int {
-        return 10
+        return viewModel.dataSource.observable.count
     }
     
     

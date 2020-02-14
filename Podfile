@@ -1,15 +1,11 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
 target 'TinderApp' do
-  # Comment the next line if you don't want to use dynamic frameworks
+project '/Users/sergejgladkij/MyProjects/TinderApp/TinderApp.xcodeproj'
   use_frameworks!
 
   # Pods for TinderApp
-
-  target 'TinderAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+pod 'Swinject'
+pod 'Kingfisher'
+  
 end

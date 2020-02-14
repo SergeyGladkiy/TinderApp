@@ -10,6 +10,7 @@ import Foundation
 
 protocol InterfaceMainScreenViewModel {
     var state: Observable<MainScreenViewModelState> { get }
+    var dataSource: Observable<[MainScreenDataSource]> { get }
     
     func getTinderData()
     func likeButtonTapped(sNumber: Int, id: String)

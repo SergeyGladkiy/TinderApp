@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "Swinject.h"
 
-FOUNDATION_EXPORT double Pods_TinderAppTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_TinderAppTestsVersionString[];
+FOUNDATION_EXPORT double SwinjectVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwinjectVersionString[];
 

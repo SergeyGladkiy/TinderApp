@@ -17,10 +17,20 @@ class MainScreenViewModel {
     
     private let model: InterfaceMainSreenModel
     let state: Observable<MainScreenViewModelState>
+    var dataSource = Observable(observable: [MainScreenDataSource]())
     
     init(model: InterfaceMainSreenModel, state: Observable<MainScreenViewModelState>) {
         self.model = model
         self.state = state
+        
+        model.models.bind { [weak self] data in
+            guard let self = self else { return }
+            if data.isEmpty { return }
+            
+            self.dataSource.observable = data
+            self.state.observable = .finishedLoad
+        }
+        
     }
 }
 

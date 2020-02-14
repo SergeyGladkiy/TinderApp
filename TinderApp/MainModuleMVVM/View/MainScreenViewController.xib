@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainScreenViewController" customModule="TinderApp" customModuleProvider="target">
             <connections>
+                <outlet property="dislikeImageView" destination="N0S-6g-ofV" id="Uhx-ae-htv"/>
+                <outlet property="likeImageView" destination="aol-RG-zBX" id="Fmd-K1-cYE"/>
                 <outlet property="swippableView" destination="YfT-Ci-8Ag" id="abz-gT-7pn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,14 +27,14 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="ew8-pd-QLC"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteAttachment" translatesAutoresizingMaskIntoConstraints="NO" id="N0S-6g-ofV">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteAttachment" translatesAutoresizingMaskIntoConstraints="NO" id="N0S-6g-ofV">
                     <rect key="frame" x="40" y="668" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="N0S-6g-ofV" secondAttribute="height" multiplier="50:50" id="Ow6-qs-gW6"/>
                         <constraint firstAttribute="height" constant="80" id="bzn-Um-7ZZ"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartRed" translatesAutoresizingMaskIntoConstraints="NO" id="aol-RG-zBX">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heartRed" translatesAutoresizingMaskIntoConstraints="NO" id="aol-RG-zBX">
                     <rect key="frame" x="255" y="668" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="aol-RG-zBX" secondAttribute="height" multiplier="50:50" id="0kr-Jt-EaJ"/>

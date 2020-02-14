@@ -8,15 +8,16 @@
 
 import Foundation
 import UIKit
+import Swinject
 
 class CoordinatorApp {
     private var window: UIWindow?
 }
 
-extension CoordinatorApp: InterfaceCoordinator {
+extension CoordinatorApp: InterfaceCoordinatorApp {
     func start() -> UIWindow {
         
-        let vc = TemporaryContainer().assembleModule()
+        let vc: MainScreenViewController = DependenceProvider.resolve()
         self.window = UIWindow()
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
