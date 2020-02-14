@@ -9,5 +9,5 @@
 import Foundation
 
 protocol InterfaceNetworkService {
-    func request(path: String, paramse: [String: String]?, completion: @escaping (Data?, Error?) -> Void)
+    func request(path: String, paramse: [String: String]?, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
 }

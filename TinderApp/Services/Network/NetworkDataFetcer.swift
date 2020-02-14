@@ -27,19 +27,32 @@ class NetworkDataFetcher {
         
         return nil
     }
+    
+    private func responseFourZeroOne() {
+        print("Meta status: 401, ERROR message: SESSION INVALID. \nP.S. Проверить актулальность X-Auth-Token на сайте Tinder (обновляется раз в одни день). Через иструменты разработчика \"слушать\" сеть до получения core в XHR. В core будет находиться новый токен")
+    }
 }
 
 extension NetworkDataFetcher: InterfaceDataFetcher {
     func getData(response: @escaping (DataTinder?) -> Void) {
         let path = API.path
         
-        self.networkService.request(path: path, paramse: nil) { [weak self] (data, error) in
+        self.networkService.request(path: path, paramse: nil) { [weak self] (data, urlResponse, error) in
             guard let self = self else { return }
             
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")
                 response(nil)
+                return
             }
+            
+            guard let responseUrl = urlResponse as? HTTPURLResponse else { return }
+            if responseUrl.statusCode == 401 {
+                self.responseFourZeroOne()
+                response(nil)
+                return
+            }
+            
             
             guard let data = data else { return }
             

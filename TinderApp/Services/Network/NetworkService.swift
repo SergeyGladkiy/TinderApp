@@ -28,10 +28,10 @@ class NetworkService {
         return urlComponents.url!
     }
     
-    private func createDataTask(urlRequest: URLRequest, completionHandler: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {
-        let task = URLSession.shared.dataTask(with: urlRequest) { (data, _, error) in
+    private func createDataTask(urlRequest: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             DispatchQueue.main.async {
-                completionHandler(data, error)
+                completionHandler(data, response, error)
             }
         }
         return task
@@ -39,13 +39,13 @@ class NetworkService {
 }
 
 extension NetworkService: InterfaceNetworkService {
-    func request(path: String, paramse: [String : String]?, completion: @escaping (Data?, Error?) -> Void) {
+    func request(path: String, paramse: [String : String]?, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         
         let url = self.getURl(host: API.host, path: path, paramse: paramse)
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue(authService.valueToken, forHTTPHeaderField: authService.keyToken)
-        let task = createDataTask(urlRequest: urlRequest) { (data, error) in
-            completion(data, error)
+        let task = createDataTask(urlRequest: urlRequest) { (data, response, error) in
+            completion(data, response, error)
         }
         task.resume()
     }
