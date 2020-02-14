@@ -10,4 +10,6 @@ import Foundation
 
 protocol InterfaceDataFetcher {
     func getData(response: @escaping (DataTinder?) -> Void)
+    
+    func postEventAction(_idUser: String, sNumberUser: Int, action: StateAction)
 }

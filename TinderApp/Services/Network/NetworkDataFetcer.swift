@@ -34,6 +34,7 @@ class NetworkDataFetcher {
 }
 
 extension NetworkDataFetcher: InterfaceDataFetcher {
+    
     func getData(response: @escaping (DataTinder?) -> Void) {
         let path = API.path
         
@@ -63,4 +64,27 @@ extension NetworkDataFetcher: InterfaceDataFetcher {
         }
     }
     
+    func postEventAction(_idUser: String, sNumberUser: Int, action: StateAction) {
+        
+        var state = ""
+        switch action {
+        case .plus:
+            state = API.like
+        case .minus:
+            state = API.dislike
+        }
+        
+        var paramse = ["local": "ru"]
+        paramse["s_number"] = "\(sNumberUser)"
+        let path = state + _idUser
+        self.networkService.request(path: path, paramse: paramse) { (data, responseUrl, error)  in
+            if let error = error {
+                print("Error received requesting data: \(error.localizedDescription)")
+            }
+            
+            guard let responseUrl = responseUrl as? HTTPURLResponse else { return }
+            _ = "status code: \(responseUrl.statusCode)"
+            //print(code)
+        }
+    }
 }

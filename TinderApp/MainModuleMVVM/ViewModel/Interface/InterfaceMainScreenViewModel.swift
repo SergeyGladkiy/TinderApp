@@ -13,6 +13,5 @@ protocol InterfaceMainScreenViewModel {
     var dataSource: Observable<[MainScreenDataSource]> { get }
     
     func getTinderData()
-    func likeButtonTapped(sNumber: Int, id: String)
-    func dislikeButtonTapped(sNumber: Int, id: String)
+    func actionbuttonTapped(index: Int, action: StateAction)
 }

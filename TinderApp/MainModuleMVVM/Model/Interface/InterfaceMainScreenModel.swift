@@ -12,6 +12,5 @@ protocol InterfaceMainSreenModel {
     var models: Observable<[MainScreenDataSource]> { get }
     
     func getDataFromTinder()
-    func sendLike(sNumber: Int, id: String)
-    func sendDislike(sNumber: Int, id: String)
+    func sendAction(sNumber: Int, id: String, state: StateAction)
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import UtilsSwippableView
+import Kingfisher
 
 class MainScreenViewController: UIViewController {
     
@@ -76,18 +77,45 @@ class MainScreenViewController: UIViewController {
         if viewModel.dataSource.observable.count > 0 {
             swippableView.autoSwipe(direction: .left)
         }
-        
     }
 
 }
 
 extension MainScreenViewController: SwippableViewDelegate, SwippableViewDataSource {
     func willSwiped(index: Int, direction: swipeDirection) {
-        
+        // MARK: swipeActions
+        if direction == .right {
+            viewModel.actionbuttonTapped(index: index, action: .plus)
+        } else {
+            viewModel.actionbuttonTapped(index: index, action: .minus)
+        }
+        // MARK: load new users
+        if index == viewModel.dataSource.observable.count - 4 {
+            viewModel.getTinderData()
+        }
+        currentIndex += 1
     }
     
     func view(view: UIView, atIndex index: Int) {
+        let infoSwippableView = viewModel.dataSource.observable[index]
+        if let photo = view.viewWithTag(1) as? UIImageView {
+            photo.kf.setImage(with: URL(string: infoSwippableView.userInfo.photos[imageCount].url))
+            photo.contentMode = .scaleAspectFill
+            photo.layer.cornerRadius = 10.0
+            
+        }
         
+        if let label = view.viewWithTag(2) as? UILabel {
+            label.text = "\(infoSwippableView.userInfo.name)"
+        }
+        
+        if let description = view.viewWithTag(3) as? UILabel {
+            if infoSwippableView.userInfo.city != "" {
+                description.text = "\(infoSwippableView.distance) км от Вас\nЖивет в городе: \(infoSwippableView.userInfo.city)"
+            } else {
+                description.text = "\(infoSwippableView.distance) км от Вас"
+            }
+        }
     }
     
     func numberOfViews() -> Int {

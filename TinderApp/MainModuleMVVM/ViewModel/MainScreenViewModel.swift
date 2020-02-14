@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum StateAction {
+    case plus
+    case minus
+}
+
 enum MainScreenViewModelState {
     case initial
     case finishedLoad
@@ -35,17 +40,13 @@ class MainScreenViewModel {
 }
 
 extension MainScreenViewModel: InterfaceMainScreenViewModel {
+    
     func getTinderData() {
         self.model.getDataFromTinder()
     }
     
-    func likeButtonTapped(sNumber: Int, id: String) {
-        self.model.sendLike(sNumber: sNumber, id: id)
-    }
-    
-    func dislikeButtonTapped(sNumber: Int, id: String) {
-        self.model.sendDislike(sNumber: sNumber, id: id)
-    }
-    
-    
+    func actionbuttonTapped(index: Int, action: StateAction) {
+        let infoModel = dataSource.observable[index]
+        self.model.sendAction(sNumber: infoModel.sNumber, id: infoModel.userInfo.id, state: action)
+       }
 }

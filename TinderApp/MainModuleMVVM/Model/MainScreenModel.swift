@@ -27,13 +27,7 @@ extension MainScreenModel: InterfaceMainSreenModel {
         }
     }
     
-    func sendLike(sNumber: Int, id: String) {
-        
+    func sendAction(sNumber: Int, id: String, state: StateAction) {
+        networkService.postEventAction(_idUser: id, sNumberUser: sNumber, action: state)
     }
-    
-    func sendDislike(sNumber: Int, id: String) {
-        
-    }
-    
-    
 }
