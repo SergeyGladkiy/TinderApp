@@ -1,0 +1,11 @@
+framework module UtilsSwippableView {
+  umbrella header "UtilsSwippableView.h"
+
+  export *
+  module * { export * }
+}
+
+module UtilsSwippableView.Swift {
+    header "UtilsSwippableView-Swift.h"
+    requires objc
+}
