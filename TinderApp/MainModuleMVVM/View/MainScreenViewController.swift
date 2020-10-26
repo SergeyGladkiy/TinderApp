@@ -94,6 +94,8 @@ extension MainScreenViewController: SwippableViewDelegate, SwippableViewDataSour
             viewModel.getTinderData()
         }
         currentIndex += 1
+        
+        
     }
     
     func view(view: UIView, atIndex index: Int) {
