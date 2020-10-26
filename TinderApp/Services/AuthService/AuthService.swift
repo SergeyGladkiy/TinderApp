@@ -10,7 +10,7 @@ import Foundation
 
 class AuthService {
     let key = "X-Auth-Token"
-    let value = "69c79c81-b37d-4a1a-94bc-6a3691c442f4"
+    let value = "f9fd3ab8-1a26-4806-8c35-29bd1b729583"
 }
 
 extension AuthService: InterfaceAuthService {
